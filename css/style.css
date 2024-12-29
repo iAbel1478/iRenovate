@@ -434,6 +434,60 @@ h3.my-profession
     width: 100%;
     display: block;
 }
+/* portfolio 2 */
+/* portfolio - A lot is unresponsive and cant figure out why. to save time, move on and impromise*/
+.portfolio-section2 .container2
+{
+    padding-bottom: 40px;
+    padding-left: 250px;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+}
+
+.portfolio-section2 .portfolio2-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.portfolio-section2 .portfolio2-heading h2 
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.portfolio-section2 .portfolio2-item 
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+    padding: 0 50px; /* Add spacing between items */
+}
+
+.portfolio-section2 .portfolio2-item-inner 
+{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-section2 .portfolio2-item-inner .portfolio2-img img 
+{
+    width: 100%;
+    display: block;
+}
+/* -------------------------- */
+
+.portfolio-section2 .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    margin-left: -15px;
+    margin-right: -15px;
+}
 
 /* contact */
 .contact-title
@@ -527,7 +581,6 @@ h3.my-profession
     height: 50px;
     padding: 0 50px;
 }
-/* From Uiverse.io by vinodjangid07 */ 
 .loader {
     width: fit-content;
     height: fit-content;
@@ -731,6 +784,7 @@ h3.my-profession
 {
     .contact .contact-info-item,
     .portfolio .portfolio-item,
+    .portfolio2 .portfolio2-item,
     .service .service-item
     {
         flex: 0 0 50%;
@@ -746,6 +800,7 @@ h3.my-profession
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-section .portfolio-item,
+    .portfolio2 .portfolio-section2 .portfolio2-item,
     .service .service-item
     {
         flex: 0 0 100%;
@@ -767,4 +822,12 @@ h3.my-profession
 /* Dark mode - change text color to white */
 body.dark .text-black-900 {
     color: #ffffff;
+}
+
+body.dark {
+    color: white;
+}
+
+body.dark .portfolio2-item .portfolio2-item-inner{
+    color: white;
 }
