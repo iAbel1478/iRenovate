@@ -831,3 +831,12 @@ body.dark {
 body.dark .portfolio2-item .portfolio2-item-inner{
     color: white;
 }
+body.dark h3.hello span
+{
+    color: lightblue;
+}
+.portfolio2-item .portfolio2-item-inner .portfolio2-img h1
+{
+    margin-left: 93px;
+    color: var(--skin-color)
+}
