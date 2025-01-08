@@ -780,7 +780,7 @@ h3.my-profession
     }
     .main-content
     {
-        padding-left: 0;
+        padding-left: calc(200px + 20px);
     }
     .absolute .about-content .personal-info .info-item p span
     {
@@ -814,6 +814,40 @@ h3.my-profession
         flex: 0 0 100%;
         max-width: 100%;
     }
+    /* Adjust main content padding dynamically */
+.main-content {
+    padding-left: calc(270px + 20px); /* Adjust for sidebar and spacing */
+}
+
+/* Make sure the sidebar doesn't overlap */
+.aside {
+    width: 270px;
+    position: sticky; /* Keeps it in place while avoiding overlap */
+    top: 0; /* Sticky position reference point */
+    z-index: 1000; /* Ensure it is layered above other content */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .aside {
+        width: 200px; /* Reduce sidebar width */
+    }
+
+    .main-content {
+        padding-left: calc(200px + 20px); /* Adjust padding for reduced width */
+    }
+
+    .section-title h2 {
+        margin-left: 20px; /* Ensure title is visible */
+    }
+}
+
+/* General improvement for section titles */
+.section-title h2 {
+    position: relative;
+    z-index: 1; /* Prevent the sidebar from overlapping */
+}
+
 }
 .loader {
     position: absolute;
@@ -846,5 +880,9 @@ body.dark h3.hello span
 .portfolio2-item .portfolio2-item-inner .portfolio2-img h1
 {
     margin-left: 93px;
+    color: var(--skin-color)
+}
+.portfolio-item .portfolio-item-inner .portfolio-img h1 {
+    margin-left: 113px;
     color: var(--skin-color)
 }
